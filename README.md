@@ -15,3 +15,7 @@ git clone https://github.com/kanaru-ssk/docker-php-sample.git
 ```sh
 docker compose up
 ```
+
+### 3. ブラウザアクセス
+
+ブラウザで http://localhost:8000 にアクセスして、「Hello World」と表示されれば起動成功
