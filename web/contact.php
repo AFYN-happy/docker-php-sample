@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="form-style.css">
 </head>
 <body>
     <h1>Contact Us</h1>
