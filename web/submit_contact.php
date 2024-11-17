@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact Us Submission</title>
-</head>
-<body>
-    <h1>Thank you!</h1>
-    <?php
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    echo "Thank you, Name: $name<br>";
-    ?>
-</body>
-</html>
+<?php
+$name = htmlspecialchars($_POST['name']);
+$message = htmlspecialchars($_POST['message']);
+
+// バリデーション
+if (empty($name) || empty($message)) {
+    $error = "Name and message are required.";
+    header("Location: contact.php?error=" . urlencode($error));
+    exit;
+}
+
+echo "Thank you, $name. Your message has been received: $message";
+?>

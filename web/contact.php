@@ -6,9 +6,14 @@
 </head>
 <body>
     <h1>Contact Us</h1>
+    <?php
+    if (isset($_GET['error'])) {
+        echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
+    }
+    ?>
     <form action="submit_contact.php" method="post">
         Name: <input type="text" name="name"><br>
-        Email: <input type="text" name="email"><br>
+        Message: <textarea name="message"></textarea><br>
         <input type="submit" value="Submit">
     </form>
 </body>
